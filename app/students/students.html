@@ -1,0 +1,21 @@
+<h2>Students</h2>
+
+<div ng-show="vm.isLoading">Loading...</div>
+
+<div class="filter" ng-show="vm.students.length">
+  <input type="text" ng-model="vm.search" ng-model-options="{ debounce: 100 }" placeholder="Search students">
+</div>
+
+<ul class="student-list" ng-show="vm.students.length">
+	<li ng-repeat="student in vm.students | filter:vm.search track by $index">
+    <div class="student-name" ng-click="vm.toggleStudent($index)">{{ student.FirstName }} {{ student.LastName }}</div>
+    <div class="student-details" ng-show="student.expanded">
+      <div>Favorite Color: {{ student.FavoriteColor }}</div>
+      <div>Favorite Food: {{ student.FavoriteFood }}</div>
+      <div>Favorite Movie: {{ student.FavoriteMovie }}</div>
+    </div>
+  </li>
+</ul>
+<div ng-show="vm.error" class="warning">
+  There was a problem loading the list of students. Try again later.
+</div>

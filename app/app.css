@@ -1,0 +1,40 @@
+/* app css stylesheet */
+.warning {
+  color: #f02020;
+}
+
+.filter {
+  margin-bottom: 15px;
+}
+.filter input[type=text] {
+  width: 100%;
+  padding: 4px 10px;
+}
+::placeholder {
+  color: #e8e8e8;
+}
+::-webkit-placeholder {
+  color: #e8e8e8;
+}
+ul.student-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+ul.student-list li {
+  padding: 0;
+  margin: 0;
+  display: block;
+  margin-top: 2px;
+}
+ul.student-list li .student-name {
+  cursor: pointer;
+  padding: 8px 20px;
+  background-color: #f2f2f2;
+}
+ul.student-list li .student-details {
+  padding: 8px 16px;
+  color: #888;
+  margin-left: 20px;
+  border-left: 4px solid #f2f2f2;
+}
